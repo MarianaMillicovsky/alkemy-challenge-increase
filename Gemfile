@@ -40,3 +40,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails' #, require: 'dotenv/rails-now'
+
+#gem 'httparty'
+gem 'json'
+gem 'rest-client'
+#gem 'net-http'
+#gem 'open-uri'
+gem 'pry'
