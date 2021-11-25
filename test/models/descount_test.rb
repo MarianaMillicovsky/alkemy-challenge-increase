@@ -1,6 +1,6 @@
 require "test_helper"
 
-class filetransactionTest < ActiveSupport::TestCase
+class DescountTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

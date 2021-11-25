@@ -6,13 +6,13 @@ class filetransactionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get filetransactiontions_url, as: :json
+    get filetransactions_url, as: :json
     assert_response :success
   end
 
   test "should create filetransactiontion" do
     assert_difference('filetransactiontion.count') do
-      post filetransactiontions_url, paramsfiletransactionnsaction: {  } }, as: :json
+      post filetransactions_url, paramsfiletransactionnsaction: {  } }, as: :json
     end
 
     assert_response 201

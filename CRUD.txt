@@ -1,0 +1,75 @@
+ps -aef | grep rails
+killall ruby
+
+GET, url:   localhost:3000/api/v1/characters/
+
+
+{
+    "name": "Goofie", 
+    "age": "11", 
+    "history": "the history", 
+    "weight": "122.2",
+    "movie_id": "2"
+}
+
+
+GET, url:   localhost:3000/api/v1/movies/
+
+
+{
+    "title": "Donald the duck",
+    "rating": "5",
+    "image_url": "http/cuteDucks.com",
+    "date_of_creation": "2020/11/11",
+    "character_id": "2"  
+}
+
+
+
+
+
+
+
+{
+    "firstName": "Gooasdafie", 
+    "lastName": "asdad11", 
+    "email": "theiasa@sdadatory", 
+    "password": "122asdada2"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "movie":
+    {
+        "title": "Creamy Dill Chicken", 
+        "description": "ome or all of it if too strong.", 
+        "character":[
+            {
+                "name": "Donald"
+            }, 
+            {
+                "image_url": "http:notTrump.com"
+            },
+            {
+                "age": "8"
+            }
+            ]
+      
+    }
+}
+
+TAREA:  TERMINAR creacion asociada de characters a movies,
+- los otros CRUD,
+-SENDGRIG, AUTENTICACION,
+-TESTS CON SRPEC

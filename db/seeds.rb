@@ -6,16 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-BASE_URL = 'https://increase-transactions.herokuapp.com/'
-url = 'https://increase-transactions.herokuapp.com/file.txt'
+BASE_URL = 'https://increase-filetransactiontions.herokuapp.com/'
+url = 'https://increase-filetransactiontions.herokuapp.com/file.txt'
 bearer_token = 'Bearer 1234567890qwertyuiopasdfghjklzxcvbnm'
-response = RestClient::Request.execute(
-    method: :get,
-    url: url,
-    headers: {Authorization: 'Bearer 1234567890qwertyuiopasdfghjklzxcvbnm'},
-    timeout: 3600,
-    raw_response: true)
+response = RestClient.get(url, {:Authorization => bearer_token})
 
-    breeds_array = JSON.parse(response)
+require 'charlock_holmes'
+      def detected_encoding(text)
+        @text = text
+        CharlockHolmes::EncodingDetector.detect(@text)[:encoding]
+      end
 
-    binding.pry
+      def convert_to_utf8(text,detected_encoding)
+        CharlockHolmes::Converter.convert(text, detected_encoding, "UTF-8")
+      end
+
+
+#breeds_array = JSON.parse(response)
+
+binding.pry
